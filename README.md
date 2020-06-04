@@ -19,8 +19,21 @@ Apartment List Mini App built using ReactJS as requirement for applying Frontend
 
 ## Installation
 
-- `npm install`
-- `npm start`
+1. Prior run the spacestock-web, you must install the mock server first to be able use it. You can go here https://github.com/galihcitta/spacestock-api to install the mock server on your local machine.
+
+2. After you finish installing the mock server, clone this repository
+
+3. Installing the dependencies using npm
+
+```
+npm install
+```
+
+3. Run the app using this command
+```
+npm start
+```
+The default url of this app is: http://localhost:3001
 
 
 ## Screencast App
