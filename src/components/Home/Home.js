@@ -38,8 +38,8 @@ const Home = (props) => {
                                 className="w-64 px-10 md:px-16 shadow p-1 appearance-none text-xl border lg:text-xl rounded-lg text-gray-700 focus:outline-none focus:shadow-outline text-center md:w-full md:flex-grow"
                                 placeholder="Masukkan kota"
                                 options={{
-                                    appId: 'pl33CFDAJVTG',
-                                    apiKey: '377e57ff57bdafa5f3a0026ae3225a93',
+                                    appId: process.env.REACT_APP_AP_ID,
+                                    apiKey: process.env.REACT_APP_AP_KEY,
                                     type: 'city'
                                   }}
                                 onChange={({ suggestion }) => {
