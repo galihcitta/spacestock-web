@@ -21,3 +21,7 @@ Apartment List Mini App built using ReactJS as requirement for applying Frontend
 
 - `npm install`
 - `npm start`
+
+
+## Screencast App
+![](https://media.giphy.com/media/QsywKbxDION8rQfqQV/giphy.gif)
