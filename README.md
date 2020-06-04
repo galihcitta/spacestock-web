@@ -4,9 +4,10 @@ Apartment List Mini App built using ReactJS as requirement for applying Frontend
 
 >This app has 3 features:
 
->1. Search Apartment. Display results on apartment list sbased on the keywords location entered.
->2. Apartment Details. Display detail informations of apartment.
->3. Apartment Map Location. Display apartment location on map
+>1. Search Apartment. Display results on apartments's list  based on the keywords location entered.
+>2. Apartment Details. Display detail information of apartments.
+>3. Apartment Map Location. Display apartments's location on map.
+>4. Pagination on list of apartment.
 
 **Tech Stack**
 
