@@ -2,7 +2,7 @@
 
 Apartment List Mini App built using ReactJS as requirement for applying Frontend Engineer at SpaceStock
 
->This app has 4 features:
+>This app has 3 features:
 
 >1. Search Apartment. Display results on apartment list sbased on the keywords location entered.
 >2. Apartment Details. Display detail informations of apartment.
@@ -26,5 +26,5 @@ Apartment List Mini App built using ReactJS as requirement for applying Frontend
 ## Screencast App
 ![](https://media.giphy.com/media/QsywKbxDION8rQfqQV/giphy.gif)
 
-![](https://gph.is/g/4DkQxXO)
+![](https://giphy.com/gifs/ejyaIk7SwX1kGYc2Hd/html5)
 
