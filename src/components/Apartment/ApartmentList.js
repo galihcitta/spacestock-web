@@ -7,18 +7,24 @@ import { FiMap } from 'react-icons/fi'
 import { FiList } from 'react-icons/fi'
 import { useForm } from 'react-hook-form'
 import AlgoliaPlaces from 'algolia-places-react'
+import ApartmentPaginate from './ApartmentPaginate'
 
 const ApartmentList = (props) => {
     const [data, setData] = useState([])
     const [showMap, setShowMap] = useState(true)
     const [isFetching, setIsFetching] = useState(true)
     const [citySelected, setCitySelected] = useState('')
+    const [currentPage, setCurrentPage] = useState(1)
+    const [dataPerPage, setDataPerPage] = useState(6)
     const { handleSubmit } = useForm()
     const onSubmit = (data) =>
         props.history.push('/listings', { response: citySelected })
 
     let queryCityURL = ''
     let selectedCity = 'Seluruh Indonesia'
+
+    const onPaginate = (pageNumber) => setCurrentPage(pageNumber)
+
 
     if (
         props.location.state === undefined ||
@@ -42,7 +48,6 @@ const ApartmentList = (props) => {
                 })
                 setIsFetching(false)
                 setData(response.data)
-                //console.log(response.data)
             } catch (e) {
                 console.log(e)
             }
@@ -50,9 +55,14 @@ const ApartmentList = (props) => {
           fetchListings()
       }, [queryCityURL])
 
+      const indexOfLastPost = currentPage * dataPerPage
+    const indexOfFirstPost = indexOfLastPost - dataPerPage
+    const currentPosts = data.slice(indexOfFirstPost, indexOfLastPost)
+
+
     let results
     if (data.length > 0) {
-        results = data.map((el, index) => <ApartmentCard key={el.id} {...el} />)
+        results = currentPosts.map((el, index) => <ApartmentCard key={el.id} {...el} />)
     } else {
         results = (
         <div className="flex items-center flex-col justify-center w-full h-full flex-grow bg-gray-100 text-gray-800">
@@ -140,9 +150,13 @@ const ApartmentList = (props) => {
                         : 'hidden'
                     } lg:inline-block lg:w-1/3 lg:bg-red-300 lg:sticky`}
                 >
-                <MyMap listingsInfo={data} />
+                <MyMap listingsInfo={currentPosts} />
               </div>
             </div>
+            <ApartmentPaginate 
+            postsPerPage={dataPerPage} 
+            totalPosts={data.length} 
+            paginate={onPaginate} />
         </div>
     )
 }
