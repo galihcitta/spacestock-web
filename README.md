@@ -26,4 +26,5 @@ Apartment List Mini App built using ReactJS as requirement for applying Frontend
 ## Screencast App
 ![](https://media.giphy.com/media/QsywKbxDION8rQfqQV/giphy.gif)
 
-<img src="https://media.giphy.com/media/RlqzosHoNl9CfoYiN8/giphy.gif" alt="screen2">
+![](https://media.giphy.com/media/QsywKbxDION8rQfqQV/giphy.gif)
+
